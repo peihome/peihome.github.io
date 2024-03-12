@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="/js/cookieUtil.js" type="module"></script>
+    <script src="/js/index.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <title>TASK MANAGER</title>
+  </head>
+  <body>
+    <!-- popup for add task -->
+    <div class="home">
+      <div id="b-popup" class="dN">
+        <!--  class="hidden" -->
+        <div id="b-close"> &times; </div>
+        <div class="b-form">
+          <h2>Add Task</h2>
+          <div class="b-form-element dN">
+            <input type="text" id="taskId">
+          </div>
+          <div class="b-form-element">
+            <label for="task-name">Task Name</label>
+            <input type="text" id="task-name" placeholder="Enter task name..">
+          </div>
+          <div class="b-form-element">
+            <label for="task-description">Task Description</label>
+            <input type="text" id="task-description" placeholder="Enter task description..">
+          </div>
+          <div class="b-form-element">
+            <label for="task-assign">Task Assigned to</label>
+            <select id="task-assign">
+              <option value="none">None</option>
+            </select>
+          </div>
+          <div class="b-form-element">
+            <label for="task-due">Task Due date</label>
+            <input type="date" id="task-due">
+          </div>
+          <div class="b-form-element">
+            <label for="task-category">Task Category</label>
+            <select id="task-category">
+              <option value="To-Do">To-Do</option>
+              <option value="In-Progress">In-Progress</option>
+              <option value="Completed">Completed</option>
+            </select>
+          </div>
+          <div class="b-form-element">
+            <button class="b1-button" id="saveTask">Save Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="backgroundDiv">
+      <a href="#" class="logout" id="logout">Logout</a>
+      <header>
+        <nav class="container">
+          <div class="flexBox">
+            <div class="logo">
+              <img src="/img/logo.png" alt="Logo" />
+              <p> Task Manager</p>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <!-- option -->
+        <div class="b-list">
+          <div class="b-item dG">
+            <div class="b-example jSC">
+              <input class="searchBar" type="text" placeholder="Search.." name="search" id="searchField">
+              <button class="searchIcon" id="searchIcon" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <section class="container">
+          <div class="row task" id="todo">
+            <h2 class="list"> To-Do </h2>
+            <span class="addTask" id="To-Do">+ Add Task</span>
+          </div>
+          <div class="row progress" id="inProgress">
+            <h2 class="textProgress">In-Progress</h2>
+            <span class="addTask" id="In-Progress">+ Add Task</span>
+          </div>
+          <div class="row completed" id="completed">
+            <h2 class="textCompleted">Completed</h2>
+            <span class="addTask" id="Completed">+ Add Task</span>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
