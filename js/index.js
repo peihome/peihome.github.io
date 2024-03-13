@@ -12,17 +12,23 @@ $(document).ready(() => {
         return;
     }
 
+    //Populate the tasks on page load
     populateTaskList();
+
+    //Load the users list on page load
     populateUsersList();
 
+    //Jquery based click event for handling addition of newer elements in DOM
     $(document).on('click', '.editIcon', function(ele) {
         openTaskEdit(ele);
     });
 
+    //Jquery based click event for handling addition of newer elements in DOM
     $(document).on('click', '.trashIcon', function(ele) {
         deleteTask(ele);
     });
 
+    //Save Task event trigger
     $('#saveTask').click(() => {
         switch ($('#task-category').val()) {
             case 'To-Do':
@@ -38,8 +44,7 @@ $(document).ready(() => {
         resetForm();
     });
 
-
-
+    //Add Task popup action
     $(".addTask").click((ele) => {
         $("#task-category").val(ele.target.id);
         $("#b-popup").addClass("active");
@@ -47,15 +52,18 @@ $(document).ready(() => {
         $(".backgroundDiv").addClass("blur");
     });
 
+    //Remove cookie on logout action
     $('#logout').click(() => {
         deleteCookie('loggedInUser');
         window.location.href = '/html/login.html';
     });
 
-    $('#searchIcon').click(() => {
+    //On change event for search bar
+    $( "#searchField" ).on( "keyup", function() {
         searchBar();
-    });
+    } );
 
+    //Popup close event handler
     $("#b-popup #b-close").click(() => {
         $('#b-popup').addClass('dN');
         $("#b-popup").removeClass("active");

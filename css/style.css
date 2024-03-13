@@ -632,7 +632,7 @@ h1 {
 }
 
 .searchBar {
-	padding-left: 1.5em;
+	padding-left: 2.5em;
 	border-radius: 2em;
 	width: 20em;
 	height: 3em;
@@ -669,4 +669,10 @@ h1 {
 	padding: 2.3em;
 	right: 0;
 	position: absolute;
+}
+
+.fa-search {
+	position: absolute;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
 }

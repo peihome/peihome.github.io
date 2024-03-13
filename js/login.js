@@ -7,6 +7,7 @@ import {
 
 $(document).ready(() => {
 
+    //Get user details from local storage
     const userDetails = getUserDetails();
 
     $('#loginBtn').click(() => {
@@ -25,6 +26,7 @@ $(document).ready(() => {
         }
     });
 
+    //Register button click event handler
     $('#registerBtn').click(() => {
 
         let userName = $('#regUserName').val();
@@ -35,7 +37,7 @@ $(document).ready(() => {
         window.location.href = '/html/login.html';
     });
 
-
+    //Signup button click event handler
     $('#signup').click(()=>{
         $('.login').addClass('dN');
         $('.registration').removeClass('dN');
@@ -44,11 +46,13 @@ $(document).ready(() => {
         $('#registerBtn').val('Signup');
     });
 
+    //Login button click event handler
     $('#login').click(()=>{
         $('.login').removeClass('dN');
         $('.registration').addClass('dN');
     });
 
+    //Forgot password click event handler
     $('#forgotPassword').click(()=>{
         $('.login').addClass('dN');
         $('.registration').removeClass('dN');
